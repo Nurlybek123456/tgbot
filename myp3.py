@@ -1,6 +1,10 @@
 import telebot
 bot = telebot.TeleBot("5056731306:AAHZDKfF-Kp1f8qid8AilyWQ_OOuW-Mt6Mk")
 from time import sleep
+import openai
+
+openai.organization = "org-QrrCf1jTVkgOIthwulZfRym6"
+openai.api_key = os.getenv("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")
 
 
 
@@ -66,10 +70,30 @@ def send(message):
     bot.reply_to(message, 'Нанпалааау🤣')
    elif message.text.lower()=='au':
     bot.reply_to(message, 'Nanpalaaau🤣')
-   elif message.text == '-смс' and message.from_user.id==992130415:
+   elif message.text == '-смс' and message.from_user.id==1287589438:
     bot.delete_message(message.chat.id, message.reply_to_message.id)
     bot.delete_message(message.chat.id,message.id)
    elif message.from_user.id==2106692657:
        bot.delete_message(message.chat.id, message.id)
+   elif message.text.lower()=='нет'
+       bot.reply_to(message, 'минет')
+   elif message.text.lower()=='ага'
+       bot.reply_to(message,'курага')
+    
+    
+ @bot.message_handler(content_types=['text'])
+ def generateImage(message):
+    msg = message.text.lower()
+    text = msg.find("Нарисуй")
+    if text !=-1
+     response = openai.Image.create(
+     prompt=msg[text:],
+     n=1,
+     size="1024x1024" )
+     image_url = response['data'][0]['url']
+
+  
+   
+
 
 bot.infinity_polling()
