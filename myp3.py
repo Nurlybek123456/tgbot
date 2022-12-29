@@ -81,7 +81,7 @@ def send(message):
        bot.reply_to(message,'курага')
     
     
- @bot.message_handler(content_types=['text'])
+@bot.message_handler(content_types=['text'])
  def generateImage(message):
     msg = message.text.lower()
     text = msg.find("Нарисуй")
