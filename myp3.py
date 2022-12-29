@@ -75,9 +75,9 @@ def send(message):
     bot.delete_message(message.chat.id,message.id)
    elif message.from_user.id==2106692657:
        bot.delete_message(message.chat.id, message.id)
-   elif message.text.lower()=='нет'
+   elif message.text.lower()=='нет':
        bot.reply_to(message, 'минет')
-   elif message.text.lower()=='ага'
+   elif message.text.lower()=='ага':
        bot.reply_to(message,'курага')
     
     
@@ -85,7 +85,7 @@ def send(message):
  def generateImage(message):
     msg = message.text.lower()
     text = msg.find("Нарисуй")
-    if text !=-1
+    if text !=-1:
      response = openai.Image.create(
      prompt=msg[text:],
      n=1,
