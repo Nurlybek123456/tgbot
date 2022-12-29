@@ -82,7 +82,7 @@ def send(message):
     
     
 @bot.message_handler(content_types=['text'])
- def generateImage(message):
+def generateImage(message):
     msg = message.text.lower()
     text = msg.find("Нарисуй")
     if text !=-1:
