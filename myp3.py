@@ -67,11 +67,13 @@ def sends(message):
 
 @bot.message_handler(content_types=['text'])
 def send(message):
-   if message.text.lower()== 'ау':
+     msg = message.text.lower()
+    text = msg.find("Нарисуй")
+   if msg == 'ау':
     bot.reply_to(message, 'Нанпалааау🤣')
-   elif message.text.lower()=='au':
+   elif msg =='au':
     bot.reply_to(message, 'Nanpalaaau🤣')
-   elif message.text == '-смс' and message.from_user.id==1287589438:
+   elif msg == '-смс' and message.from_user.id==1287589438:
     bot.delete_message(message.chat.id, message.reply_to_message.id)
     bot.delete_message(message.chat.id,message.id)
    elif message.from_user.id==2106692657:
@@ -80,18 +82,15 @@ def send(message):
        bot.reply_to(message, 'минет')
    elif message.text.lower()=='ага':
        bot.reply_to(message,'курага')
-    
-    
-@bot.message_handler(content_types=['text'])
-def generateImage(message):
-    msg = message.text.lower()
-    text = msg.find("Нарисуй")
-    if text !=-1:
+   elif text !=-1:
      response = openai.Image.create(
      prompt=msg[text:],
      n=1,
      size="1024x1024" )
      image_url = response['data'][0]['url']
+    
+    
+
 
   
    
