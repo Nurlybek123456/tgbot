@@ -39,7 +39,7 @@ def sends(message):
     bot.edit_message_text(chat_id=message.chat.id, message_id=msg.message_id, text='☁️🌨☁️🌨☁️🌨☁️🌨☁️🌨☁   \n    💥🎉🥳💥🎉🎈🎁🎊💥\n\n\n\n    ❄️      ❄️    ❄️  ❄️      ❄️  ❄️️ \n \n   🎉   П Р И В Е Т  ️С Е С Т Р А    ')
     sleep(0.2)
     bot.edit_message_text(chat_id=message.chat.id, message_id=msg.message_id, text='☁️🌨☁️🌨☁️🌨☁️🌨☁️🌨☁   \n    💥🎉🥳💥🎉🎈🎁🎊💥\n\n\n\n    ❄️      ❄️    ❄️  ❄️      ❄️  ❄️️ \n \n 🎉   П Р И В Е Т  ️С Е С Т Р А   🎉')
-
+   else bot.reply_to(message,"гот, ты не ее брат")
 @bot.message_handler(commands=['snow'])
 def sends(message):
     msg = bot.reply_to(message,"☁️🌨☁️🌨☁️🌨☁️🌨☁️🌨☁ \n \n \n \n \n \n \n⛄️☃️⛄️☃️⛄️☃️⛄️☃️⛄️☃️⛄️")
