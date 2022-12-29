@@ -88,6 +88,7 @@ def send(message):
      n=1,
      size="1024x1024" )
      image_url = response['data'][0]['url']
+     bot.reply_to(message,image_url)
     
     
 
