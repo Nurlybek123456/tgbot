@@ -68,7 +68,7 @@ def sends(message):
 @bot.message_handler(content_types=['text'])
 def send(message):
      msg = message.text.lower()
-    text = msg.find("Нарисуй")
+     text = msg.find("Нарисуй")
    if msg == 'ау':
     bot.reply_to(message, 'Нанпалааау🤣')
    elif msg =='au':
