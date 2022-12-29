@@ -1,5 +1,5 @@
 pyTelegramBotAPI==4.2.2
 requests==2.26.0
 openai
-os-sys
+os-sys==2.1.3
 
