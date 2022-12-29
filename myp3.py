@@ -2,6 +2,7 @@ import telebot
 bot = telebot.TeleBot("5056731306:AAHZDKfF-Kp1f8qid8AilyWQ_OOuW-Mt6Mk")
 from time import sleep
 import openai
+import os
 
 openai.organization = "org-QrrCf1jTVkgOIthwulZfRym6"
 openai.api_key = os.getenv("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")
