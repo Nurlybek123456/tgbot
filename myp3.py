@@ -15,7 +15,7 @@ ADMIN_ID = "805509116"
 
 @bot.message_handler(content_types=['text'])
 def sends(message):
-   if message.from_user.id==1287589438 and message.text.lower()=='привет сестренка' or message.text.lower()=='привет сестра':
+   if (message.from_user.id==1287589438) and (message.text.lower()=='привет сестренка' or message.text.lower()=='привет сестра'):
     msg = bot.reply_to(message,"☁️🌨☁️🌨☁️🌨☁️🌨☁️🌨☁ \n \n \n \n \n \n \n⛄️☃️⛄️☃️⛄️☃️⛄️☃️⛄️☃️⛄️")
     sleep(0.2)
     bot.edit_message_text(chat_id=message.chat.id, message_id=msg.message_id, text='☁️🌨☁️🌨☁️🌨☁️🌨☁️🌨☁   \n  ❄️      ❄️    ❄️  ❄️      ❄️  ❄️ \n \n \n \n \n \n⛄️☃️⛄️☃️⛄️☃️⛄️☃️⛄️☃️⛄  ')
