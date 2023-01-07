@@ -37,6 +37,10 @@ def sends(message):
     sleep(0.2)
     bot.edit_message_text(chat_id=message.chat.id, message_id=msg.message_id, text='☁️🌨☁️🌨☁️🌨☁️🌨☁️🌨☁   \n    💥🎉🥳💥🎉🎈🎁🎊💥\n\n\n\n    ❄️      ❄️    ❄️  ❄️      ❄️  ❄️️ \n \n 🎉   H ️A ️P ️P ️Y    ️N E W    D A Y 🎉')
 
+@bot.message_handler(func=lambda message: "Рамуля" in message.text)
+def delete_message(message):
+    bot.delete_message(message.chat.id, message.message_id)
+    
 @bot.message_handler(content_types=['text'])
 def send(message):
    msg = message.text.lower()
@@ -54,9 +58,7 @@ def send(message):
        bot.reply_to(message, 'минет')
    elif message.text.lower()=='ага':
        bot.reply_to(message,'курага')
-@bot.message_handler(func=lambda message: "Рамуля" in message.text)
-def delete_message(message):
-    bot.delete_message(message.chat.id, message.message_id)
+
  
     
 
