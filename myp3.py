@@ -6,7 +6,7 @@ from time import sleep
 
 
 
-ADMIN_ID = "805509116"
+ADMIN_ID = "1287589438"
 
 
 
@@ -37,7 +37,7 @@ def sends(message):
     sleep(0.2)
     bot.edit_message_text(chat_id=message.chat.id, message_id=msg.message_id, text='☁️🌨☁️🌨☁️🌨☁️🌨☁️🌨☁   \n    💥🎉🥳💥🎉🎈🎁🎊💥\n\n\n\n    ❄️      ❄️    ❄️  ❄️      ❄️  ❄️️ \n \n 🎉   H ️A ️P ️P ️Y    ️N E W    D A Y 🎉')
 
-@bot.message_handler(func=lambda message: "Рамуля" in message.text)
+@bot.message_handler(func=lambda message: "Рамул" in message.text)
 def delete_message(message):
     bot.delete_message(message.chat.id, message.message_id)
     
@@ -49,7 +49,7 @@ def send(message):
     bot.reply_to(message, 'Нанпалааау🤣')
    elif msg =='au':
     bot.reply_to(message, 'Nanpalaaau🤣')
-   elif msg == '-смс' and message.from_user.id==1287589438:
+   elif msg == '-смс' and message.from_user.id==ADMIN_ID:
     bot.delete_message(message.chat.id, message.reply_to_message.id)
     bot.delete_message(message.chat.id,message.id)
    elif message.from_user.id==2106692657:
