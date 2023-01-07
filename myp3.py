@@ -47,7 +47,7 @@ def sends(message):
 @bot.message_handler(content_types=['text'])
 def send(message):
    msg = message.text.lower()
-   if pattern1.search(message.text) or pattern2.search(text):
+   if pattern1.search(message.text) or pattern2.search(message.text):
     bot.delete_message(message.chat.id, message.message_id)
    elif msg == 'ау':
     bot.reply_to(message, 'Нанпалааау🤣')
