@@ -54,8 +54,9 @@ def send(message):
        bot.reply_to(message, 'минет')
    elif message.text.lower()=='ага':
        bot.reply_to(message,'курага')
-   elif message.text.lower().find("Рамуля")!=-1:
-       bot.delete_message(message.chat.id,message.id)
+@bot.message_handler(func=lambda message: "Рамуля" in message.text)
+def delete_message(message):
+    bot.delete_message(message.chat.id, message.message_id)
  
     
 
