@@ -9,7 +9,7 @@ from time import sleep
 
 ADMIN_ID = 1287589438
 pattern1 = re.compile(r'\b(Рамуля|Ramulya)\b', re.IGNORECASE)
-pattern2 = re.compile(r'[РАМУЛЯрамуля]+', re.IGNORECASE)
+pattern2 = re.compile(r'(?i)(^|\s)(Рамуля|Ramulya)($|\s)')
 
 
 
