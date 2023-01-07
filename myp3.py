@@ -6,7 +6,7 @@ from time import sleep
 
 
 
-ADMIN_ID = "1287589438"
+ADMIN_ID = 1287589438
 
 
 
