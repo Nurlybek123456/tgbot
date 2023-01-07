@@ -52,11 +52,15 @@ def compare_strings(string1, string2):
     string1 = ''.join(c for c in string1 if not unicodedata.combining(c))
     string2 = ''.join(c for c in string2 if not unicodedata.combining(c))
 
+    # Remove any non-ASCII characters
+    string1 = re.sub(r'[^\x00-\x7f]', r'', string1)
+    string2 = re.sub(r'[^\x00-\x7f]', r'', string2)
+
     # Compare the strings
     if string1 == string2:
         return True
     else:
-        return False    
+        return False  
     
 @bot.message_handler(func=lambda message: compare_strings(message.text, "Рамуля") or compare_strings(message.text, "Ramulya"))
 def delete_message(message):
