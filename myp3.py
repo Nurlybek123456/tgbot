@@ -38,7 +38,7 @@ def sends(message):
     sleep(0.2)
     bot.edit_message_text(chat_id=message.chat.id, message_id=msg.message_id, text='☁️🌨☁️🌨☁️🌨☁️🌨☁️🌨☁   \n    💥🎉🥳💥🎉🎈🎁🎊💥\n\n\n\n    ❄️      ❄️    ❄️  ❄️      ❄️  ❄️️ \n \n 🎉   H ️A ️P ️P ️Y    ️N E W    D A Y 🎉')
 
-@bot.message_handler(func=lambda message: re.search(r'(?i)рамуля|ramulya', message.text))
+@bot.message_handler(func=lambda message: re.search(r'(?i)Pамуля|Paмуля|Paмyля', message.text))
 def delete_message(message):
     if message.from_user.id != ADMIN_ID:
         bot.delete_message(message.chat.id, message.message_id)
