@@ -8,7 +8,8 @@ from time import sleep
 
 
 ADMIN_ID = 1287589438
-pattern = re.compile(r'\b(Рамуля|Ramulya)\b', re.IGNORECASE)
+pattern1 = re.compile(r'\b(Рамуля|Ramulya)\b', re.IGNORECASE)
+pattern2 = re.compile(r'[рамуля]+', re.IGNORECASE)
 
 
 
@@ -46,7 +47,7 @@ def sends(message):
 @bot.message_handler(content_types=['text'])
 def send(message):
    msg = message.text.lower()
-   if pattern.search(message.text):
+   if pattern1.search(message.text) or pattern2.search(text):
     bot.delete_message(message.chat.id, message.message_id)
    elif msg == 'ау':
     bot.reply_to(message, 'Нанпалааау🤣')
